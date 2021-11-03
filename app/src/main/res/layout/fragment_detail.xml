@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presentation.view.fragments.DetailFragment">
+
+    <data>
+
+        <!--        <variable-->
+        <!--            name="viewModel"-->
+        <!--            type="com.studio14.spacexodyssey.viewmodel.HomeViewModel"-->
+        <!--            />-->
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginBottom="0dp"
+            android:background="?attr/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/MyActionBarTheme">
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/textView_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:letterSpacing="0.01"
+            android:text="Details"
+            android:textColor="#ffffff"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/action_bar"
+            app:layout_constraintStart_toEndOf="@+id/imageView_detail"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView_detail"
+            app:layout_constraintStart_toStartOf="@+id/action_bar"
+            app:layout_constraintTop_toTopOf="@+id/textView_detail"
+            app:srcCompat="@drawable/ic_arrow_back_white_24dp" />
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="250dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/blurView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:blurOverlayColor="@color/colorOverlay">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="15dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/detail_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:text="@string/user"
+                        android:lines="2"
+                        android:maxLines="2"
+                        />
+
+
+
+                    <TextView
+                        android:id="@+id/detail_image_tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/white"
+                        android:text="@string/image_tags"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/detail_like"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/white"
+                        android:text="@string/likes"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/detail_download"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/white"
+                        android:text="@string/downloads"
+                        />
+
+                    <TextView
+                        android:id="@+id/detail_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/white"
+                        android:text="@string/comments"
+                        />
+
+
+
+
+
+                </LinearLayout>
+
+            </eightbitlab.com.blurview.BlurView>
+
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
